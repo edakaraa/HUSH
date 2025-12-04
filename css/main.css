@@ -1,0 +1,8 @@
+/* 1. Abstracts & Base */
+@import "base/_variables.css";
+@import "base/_reset.css";
+
+/* 2. Components (Henüz boşlar ama importlarını hazırlayalım) */
+@import "components/_header.css";
+@import "components/_footer.css";
+@import "components/_hero.css";

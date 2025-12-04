@@ -1,0 +1,92 @@
+<header class="header">
+  <div class="header__container">
+    <button
+      class="header__menu-btn"
+      id="mobile-menu-trigger"
+      aria-label="Menüyü Aç"
+    >
+      <img src="assets/icons/menu.png" alt="Menu" width="20" height="20" />
+    </button>
+
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li class="nav__item nav__item--has-dropdown">
+          <a href="#" class="nav__link">KOLEKSİYONLAR</a>
+          <ul class="dropdown__menu">
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">KADIN</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">ERKEK</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">UNISEX</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">HİKAYEMİZ</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">İLETİŞİM</a></li>
+      </ul>
+    </nav>
+
+    <a href="/" class="header__logo" id="interactive-logo">
+      <img src="assets/icons/logo.png" alt="HUSH" class="header__logo-img" />
+    </a>
+
+    <div class="header__actions">
+      <button class="action-btn" aria-label="Ara">
+        <img src="assets/icons/search.png" alt="Search" />
+      </button>
+
+      <button class="action-btn" aria-label="Favoriler">
+        <img src="assets/icons/heart.png" alt="Favorites" />
+      </button>
+      <button class="action-btn" aria-label="Hesabım">
+        <img src="assets/icons/user.png" alt="Account" />
+      </button>
+
+      <button class="action-btn action-btn--cart" aria-label="Sepetim">
+        <img src="assets/icons/bag.png" alt="Cart" />
+        <span class="action-btn__badge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<aside class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu__header">
+    <div class="mobile-menu__icons">
+      <a href="#" class="mobile-icon-link" aria-label="Hesabım">
+        <img src="assets/icons/user.png" alt="User" />
+      </a>
+      <a href="#" class="mobile-icon-link" aria-label="Favoriler">
+        <img src="assets/icons/heart.png" alt="Favorites" />
+      </a>
+    </div>
+
+    <button class="mobile-menu__close" id="mobile-menu-close">&times;</button>
+  </div>
+
+  <nav class="mobile-menu__nav">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <span class="mobile-menu__title">KOLEKSİYONLAR</span>
+        <ul class="mobile-menu__sublist">
+          <li><a href="#" class="mobile-menu__sublink">KADIN</a></li>
+          <li><a href="#" class="mobile-menu__sublink">ERKEK</a></li>
+          <li><a href="#" class="mobile-menu__sublink">UNISEX</a></li>
+        </ul>
+      </li>
+
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">HİKAYEMİZ</a>
+      </li>
+
+      <li class="mobile-menu__item">
+        <a href="#" class="mobile-menu__link">İLETİŞİM</a>
+      </li>
+    </ul>
+  </nav>
+</aside>

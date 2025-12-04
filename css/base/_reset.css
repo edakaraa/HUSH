@@ -1,0 +1,74 @@
+/* Box Sizing Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin/Padding Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* List Reset */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Link Reset */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-standard);
+}
+
+/* Image Reset - Taşmaları engeller */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Input/Button Reset */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Body Defaults */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-body);
+  color: var(--color-text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility: Focus stillerini asla tamamen kaldırma, özelleştir */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
