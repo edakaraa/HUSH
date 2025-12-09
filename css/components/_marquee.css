@@ -1,0 +1,36 @@
+/* _marquee */
+.brand-marquee {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1.25rem 0;
+  position: relative;
+  top: -4.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.brand-marquee .track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: marquee-slide 20s linear infinite;
+}
+
+.brand-marquee span {
+  padding-right: 1rem;
+  white-space: nowrap;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@keyframes marquee-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

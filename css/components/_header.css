@@ -452,7 +452,7 @@
       transparent 50%
     );
 
-    /* Maskeleme: Işık sadece logonun üzerinde görünsün */
+    /* Maskeleme */
     -webkit-mask-image: url(../../assets/icons/logo.png);
     mask-image: url(../../assets/icons/logo.png);
     -webkit-mask-size: contain;

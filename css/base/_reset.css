@@ -37,7 +37,7 @@ a {
   transition: var(--transition-standard);
 }
 
-/* Image Reset - Taşmaları engeller */
+/* Image Reset */
 img {
   max-width: 100%;
   height: auto;
@@ -67,7 +67,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Accessibility: Focus stillerini asla tamamen kaldırma, özelleştir */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;

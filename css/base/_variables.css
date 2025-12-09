@@ -1,5 +1,5 @@
 /* 1. Google Fonts İçe Aktarma (Outfit) */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700&display=swap");
 
 :root {
   /* --- COLORS --- */
@@ -13,7 +13,7 @@
   --color-bg-body: var(--color-white);
 
   /* --- TYPOGRAPHY (Global Değişiklik) --- */
-  --font-primary: "Outfit", sans-serif; /* Artık Roboto değil, Outfit */
+  --font-primary: "Outfit", sans-serif;
 
   /* Base sizes */
   --font-size-xs: 0.75rem;
@@ -24,6 +24,8 @@
   --font-size-xl: 2rem;
   --font-size-xxl: 3rem;
 
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
