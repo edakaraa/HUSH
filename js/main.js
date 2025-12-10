@@ -57,4 +57,31 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn("HUSH Menü elementleri bulunamadı. HTML yapısını kontrol et.");
         }
     }, 500); // 500 milisaniye bekle
+}
+);
+/* --- FOOTER YÜKLEME VE YIL AYARI --- */
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Footer HTML dosyasını çekiyoruz
+    fetch("components/footer.html")
+        .then(response => {
+            if (!response.ok) throw new Error("Footer yüklenemedi!");
+            return response.text();
+        })
+        .then(data => {
+            // 1. Footer'ı yerine koy
+            const footerPlaceholder = document.getElementById("footer-placeholder");
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = data;
+                
+                // 2. Yılı otomatik güncelle (Footer yüklendikten SONRA çalışmalı)
+                const currentYear = new Date().getFullYear();
+                const yearSpan = document.getElementById("copyright-year");
+                if (yearSpan) {
+                    yearSpan.textContent = currentYear;
+                }
+            }
+        })
+        .catch(error => console.error("Footer hatası:", error));
+
 });

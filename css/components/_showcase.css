@@ -33,7 +33,7 @@
   color: var(--color-white);
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
@@ -44,10 +44,6 @@
   justify-content: center;
   position: relative;
   width: 100%;
-}
-
-.nav-arrow {
-  display: none;
 }
 
 .cards-wrapper {
@@ -84,7 +80,6 @@
   scroll-snap-align: center;
 }
 
-/* Badge & Resim & Footer Mobilde Aynen Kalabilir */
 .badge {
   position: absolute;
   top: 1.5rem;
@@ -149,7 +144,7 @@
 
   .category-tabs {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 3rem;
   }
 
@@ -170,22 +165,17 @@
     margin: 0 auto;
   }
 
-  .nav-arrow {
-    display: flex;
-    transform: scale(0.8);
-  }
-
   .glass-card {
     flex: 1;
     min-width: 220px;
     max-width: 300px;
 
-    height: 380px; /* Yüksekliği biraz kıstık */
-    margin: 0; /* Mobildeki marginleri sıfırla */
+    height: 380px;
+    margin: 0;
   }
 
   .card-image img {
-    max-height: 180px; /* Resim de orantılı küçülsün */
+    max-height: 180px;
   }
 }
 
@@ -208,28 +198,6 @@
 
   .tab-btn.active {
     font-size: 2.5rem;
-  }
-
-  /* Okları Göster */
-  .nav-arrow {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    margin: 0 1rem;
-  }
-
-  .nav-arrow:hover {
-    background: white;
-    color: var(--color-accent);
   }
 
   .cards-wrapper {
