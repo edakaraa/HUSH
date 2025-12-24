@@ -1,7 +1,7 @@
 /* _marquee */
 .brand-marquee {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 1.25rem 0;
   position: relative;
   top: -4.75rem;

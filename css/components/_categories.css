@@ -1,0 +1,191 @@
+/* =========================================
+   CATEGORY GRID SECTION
+   Minimal Lüks Tasarım - HUSH Stili
+   ========================================= */
+
+/* 1. BASE STYLES (Mobile First) */
+.category-grid {
+  width: 100%;
+  padding: 4rem var(--spacing-sm);
+  background-color: var(--color-white);
+}
+
+.category-grid__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.category-grid__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* 2. CATEGORY GRID WRAPPER (Mobile: Tek Sütun) */
+.category-grid__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* 3. CATEGORY CARD (Mobile) - Minimal Glass Morphism */
+.category-card {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 2rem;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(232, 141, 159, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Overlay kaldırıldı - minimal tasarım için gerek yok */
+
+/* Content */
+.category-card__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--color-black);
+  width: 100%;
+}
+
+.category-card__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.9;
+}
+
+.category-card__subtitle {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+  color: var(--color-black);
+}
+
+.category-card__cta {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.category-card__cta::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.category-card:hover .category-card__cta {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+.category-card:hover .category-card__cta::after {
+  transform: translateX(4px);
+}
+
+/* 4. KATEGORİ ÖZEL STİLLER - Minimal, sadece hover'da fark */
+.category-card--women:hover {
+  border-color: rgba(232, 141, 159, 0.4);
+}
+
+.category-card--men:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.category-card--unisex:hover {
+  border-color: rgba(232, 141, 159, 0.3);
+}
+
+/* =========================================
+   5. TABLET (≥ 768px) - 2 Sütun Grid
+   ========================================= */
+@media (min-width: 768px) {
+  .category-grid {
+    padding: 5rem var(--spacing-md);
+  }
+
+  .category-grid__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 3rem;
+  }
+
+  .category-grid__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .category-card {
+    min-height: 240px;
+  }
+}
+
+/* =========================================
+   6. DESKTOP (≥ 1024px) - 3 Sütun Grid
+   ========================================= */
+@media (min-width: 1024px) {
+  .category-grid {
+    padding: 6rem var(--spacing-lg);
+  }
+
+  .category-grid__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .category-card {
+    min-height: 280px;
+    padding: 3rem 2rem;
+  }
+
+  .category-card__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* =========================================
+   7. LARGE DESKTOP (≥ 1440px)
+   ========================================= */
+@media (min-width: 1440px) {
+  .category-card {
+    min-height: 300px;
+  }
+}
+

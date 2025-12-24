@@ -1,0 +1,177 @@
+/* =========================================
+   LIMITED EDITION BANNER SECTION
+   Minimal Lüks Tasarım - Split Layout
+   ========================================= */
+
+/* 1. BASE STYLES (Mobile First) */
+.limited-edition {
+  width: 100%;
+  padding: 4rem var(--spacing-sm);
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.limited-edition__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Content (Sol taraf - Mobile'de üstte) */
+.limited-edition__content {
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+}
+
+.limited-edition__tag {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.limited-edition__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.limited-edition__desc {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  color: var(--color-black);
+  opacity: 0.7;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.limited-edition__btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--color-black);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.limited-edition__btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 141, 159, 0.3);
+}
+
+/* Image (Sağ taraf - Mobile'de altta) */
+.limited-edition__image {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.limited-edition__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
+  transition: transform 0.4s ease;
+}
+
+.limited-edition:hover .limited-edition__image img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   2. TABLET (≥ 768px) - Yan Yana Layout
+   ========================================= */
+@media (min-width: 768px) {
+  .limited-edition {
+    padding: 5rem var(--spacing-md);
+  }
+
+  .limited-edition__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .limited-edition__content {
+    text-align: left;
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .limited-edition__title {
+    font-size: var(--font-size-xxl);
+  }
+
+  .limited-edition__desc {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .limited-edition__image {
+    flex: 1;
+    max-width: 400px;
+    height: 400px;
+  }
+}
+
+/* =========================================
+   3. DESKTOP (≥ 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+  .limited-edition {
+    padding: 6rem var(--spacing-lg);
+  }
+
+  .limited-edition__container {
+    gap: 4rem;
+  }
+
+  .limited-edition__image {
+    max-width: 450px;
+    height: 450px;
+  }
+}
+
+/* =========================================
+   4. LARGE DESKTOP (≥ 1440px)
+   ========================================= */
+@media (min-width: 1440px) {
+  .limited-edition__image {
+    max-width: 500px;
+    height: 500px;
+  }
+}
+

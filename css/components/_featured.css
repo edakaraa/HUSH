@@ -1,0 +1,212 @@
+/* =========================================
+   FEATURED COLLECTION SECTION
+   Minimal Lüks Tasarım - Yatay Scroll
+   ========================================= */
+
+/* 1. BASE STYLES (Mobile First) */
+.featured-collection {
+  width: 100%;
+  padding: 4rem var(--spacing-sm);
+  background-color: var(--color-white);
+}
+
+.featured-collection__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.featured-collection__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.featured-collection__tag {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.5;
+  margin-bottom: 0.75rem;
+}
+
+.featured-collection__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* 2. SCROLL CONTAINER (Mobile: Yatay Scroll) */
+.featured-collection__scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  padding-bottom: 1rem;
+}
+
+.featured-collection__scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.featured-collection__wrapper {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  padding: 0 var(--spacing-sm);
+}
+
+/* 3. FEATURED CARD (Mobile) - Minimal Glass Morphism */
+.featured-card {
+  min-width: 200px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(232, 141, 159, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Image */
+.featured-card__image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.featured-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-card__image img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.featured-card__content {
+  text-align: center;
+}
+
+.featured-card__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.featured-card__code {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-light);
+  color: var(--color-black);
+  opacity: 0.5;
+}
+
+/* =========================================
+   4. TABLET (≥ 768px)
+   ========================================= */
+@media (min-width: 768px) {
+  .featured-collection {
+    padding: 5rem var(--spacing-md);
+  }
+
+  .featured-collection__header {
+    margin-bottom: 3rem;
+  }
+
+  .featured-collection__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .featured-collection__wrapper {
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .featured-card {
+    min-width: 220px;
+    width: 220px;
+  }
+
+  .featured-card__image {
+    height: 200px;
+  }
+}
+
+/* =========================================
+   5. DESKTOP (≥ 1024px) - Hover Scroll
+   ========================================= */
+@media (min-width: 1024px) {
+  .featured-collection {
+    padding: 6rem var(--spacing-lg);
+  }
+
+  .featured-collection__scroll {
+    cursor: grab;
+  }
+
+  .featured-collection__scroll:active {
+    cursor: grabbing;
+  }
+
+  .featured-collection__wrapper {
+    gap: 2.5rem;
+  }
+
+  .featured-card {
+    min-width: 240px;
+    width: 240px;
+  }
+
+  .featured-card__image {
+    height: 220px;
+  }
+}
+
+/* =========================================
+   6. LARGE DESKTOP (≥ 1440px)
+   ========================================= */
+@media (min-width: 1440px) {
+  .featured-card {
+    min-width: 260px;
+    width: 260px;
+  }
+
+  .featured-card__image {
+    height: 240px;
+  }
+}
+

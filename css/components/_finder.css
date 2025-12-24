@@ -1,0 +1,94 @@
+/* =========================================
+   SCENT FINDER (MOBILE FIRST YAKLAŞIM)
+   ========================================= */
+
+/* 1. MOBİL VARSAYILAN (BASE STYLES)
+   Bu kısım tüm cihazlarda geçerlidir ama Mobili hedefler. */
+.scent-finder {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* Mobilde çok devasa olmasın */
+  
+  /* Flexbox ile Mobilde Ortala */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Mobilde içerik ortada */
+  text-align: center;      /* Yazılar ortalı */
+  
+  background-image: url('../assets/images/quiz-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  
+  color: var(--color-white);
+  padding: 3rem 1.5rem; /* Mobilde kenar boşlukları dar */
+}
+
+/* Koyu Filtre (Mobilde Düz Renk) */
+.scent-finder__overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  /* Mobilde yazı okunabilirliği için daha koyu ve düz bir filtre */
+  background: rgba(0, 0, 0, 0.75); 
+  z-index: 1;
+}
+
+/* İçerik Kutusu */
+.scent-finder__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /* Flex direction column zaten default ama emin olalım */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Butonu ve yazıları ortala */
+}
+
+/* Tag (Üst Başlık) */
+.scent-finder__tag {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent, #d4af37);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Ana Başlık (Mobilde daha küçük) */
+.scent-finder__title {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 2.25rem; /* Mobilde devasa olmasın */
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* Açıklama Metni */
+.scent-finder__desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  max-width: 100%; /* Mobilde tam genişlik */
+}
+
+/* Buton (Mobilde parmakla basılacak büyüklükte) */
+.btn-finder {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem; /* Mobilde ideal dokunma alanı */
+  
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+  
+  font-size: 0.9rem;
+  font-weight: 600;
+}
