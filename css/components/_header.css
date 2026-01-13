@@ -22,7 +22,6 @@
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: space-between;

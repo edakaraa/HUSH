@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HUSH Profilim - Hesap bilgileriniz, siparişleriniz ve tercihleriniz."
+    />
+    <title>Profilim - HUSH</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="profile-hero">
+        <div class="profile-hero__container">
+          <div class="profile-hero__avatar">
+            <div class="profile-hero__avatar-circle">
+              <span class="profile-hero__avatar-initials">JD</span>
+            </div>
+            <button class="profile-hero__avatar-edit" aria-label="Fotoğraf Değiştir">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+              </svg>
+            </button>
+          </div>
+          <h1 class="profile-hero__title">Hoş Geldiniz</h1>
+          <p class="profile-hero__email">ornek@email.com</p>
+        </div>
+      </section>
+
+      <!-- Profile Content -->
+      <section class="profile-section">
+        <div class="profile-section__container">
+          <!-- Navigation Tabs -->
+          <div class="profile-tabs">
+            <button class="profile-tab active" data-tab="info">Hesap Bilgileri</button>
+            <button class="profile-tab" data-tab="orders">Siparişlerim</button>
+            <button class="profile-tab" data-tab="favorites">Favorilerim</button>
+            <button class="profile-tab" data-tab="settings">Ayarlar</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="profile-content">
+            <!-- Hesap Bilgileri -->
+            <div class="profile-tab-content active" id="info">
+              <div class="profile-card">
+                <h2 class="profile-card__title">Kişisel Bilgiler</h2>
+                <form class="profile-form">
+                  <div class="form-group">
+                    <label for="profile-name" class="form-label">Ad Soyad</label>
+                    <input
+                      type="text"
+                      id="profile-name"
+                      name="name"
+                      class="form-input"
+                      value="John Doe"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profile-email" class="form-label">E-posta</label>
+                    <input
+                      type="email"
+                      id="profile-email"
+                      name="email"
+                      class="form-input"
+                      value="ornek@email.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profile-phone" class="form-label">Telefon</label>
+                    <input
+                      type="tel"
+                      id="profile-phone"
+                      name="phone"
+                      class="form-input"
+                      value="+90 5XX XXX XX XX"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profile-birthdate" class="form-label">Doğum Tarihi</label>
+                    <input
+                      type="date"
+                      id="profile-birthdate"
+                      name="birthdate"
+                      class="form-input"
+                    />
+                  </div>
+
+                  <button type="submit" class="btn-submit">Bilgileri Güncelle</button>
+                </form>
+              </div>
+
+              <div class="profile-card">
+                <h2 class="profile-card__title">Adres Bilgileri</h2>
+                <div class="profile-addresses">
+                  <div class="profile-address">
+                    <div class="profile-address__header">
+                      <h3 class="profile-address__title">Ev Adresi</h3>
+                      <div class="profile-address__actions">
+                        <button class="profile-address__btn">Düzenle</button>
+                        <button class="profile-address__btn profile-address__btn--delete">Sil</button>
+                      </div>
+                    </div>
+                    <p class="profile-address__text">
+                      Nişantaşı Mahallesi<br />
+                      Teşvikiye Caddesi No:123<br />
+                      Şişli, İstanbul 34365
+                    </p>
+                  </div>
+                </div>
+                <button class="profile-card__btn">Yeni Adres Ekle</button>
+              </div>
+            </div>
+
+            <!-- Siparişlerim -->
+            <div class="profile-tab-content" id="orders">
+              <div class="profile-card">
+                <h2 class="profile-card__title">Siparişlerim</h2>
+                <div class="profile-orders">
+                  <div class="profile-order">
+                    <div class="profile-order__header">
+                      <div>
+                        <span class="profile-order__number">Sipariş #12345</span>
+                        <span class="profile-order__date">15 Ocak 2024</span>
+                      </div>
+                      <span class="profile-order__status">Teslim Edildi</span>
+                    </div>
+                    <div class="profile-order__items">
+                      <div class="profile-order__item">
+                        <span class="profile-order__item-name">Luna Parfüm - 50ml</span>
+                        <span class="profile-order__item-price">₺1,250</span>
+                      </div>
+                    </div>
+                    <div class="profile-order__footer">
+                      <span class="profile-order__total">Toplam: ₺1,250</span>
+                      <button class="profile-order__btn">Detayları Görüntüle</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Favorilerim -->
+            <div class="profile-tab-content" id="favorites">
+              <div class="profile-card">
+                <h2 class="profile-card__title">Favorilerim</h2>
+                <div class="profile-favorites">
+                  <p class="profile-empty">Henüz favori ürününüz bulunmamaktadır.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ayarlar -->
+            <div class="profile-tab-content" id="settings">
+              <div class="profile-card">
+                <h2 class="profile-card__title">Hesap Ayarları</h2>
+                <div class="profile-settings">
+                  <div class="profile-setting">
+                    <div class="profile-setting__content">
+                      <h3 class="profile-setting__title">E-posta Bildirimleri</h3>
+                      <p class="profile-setting__desc">Yeni ürünler ve kampanyalar hakkında bilgilendirilmek istiyorum</p>
+                    </div>
+                    <label class="profile-toggle">
+                      <input type="checkbox" checked />
+                      <span class="profile-toggle__slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="profile-setting">
+                    <div class="profile-setting__content">
+                      <h3 class="profile-setting__title">SMS Bildirimleri</h3>
+                      <p class="profile-setting__desc">Sipariş durumu hakkında SMS almak istiyorum</p>
+                    </div>
+                    <label class="profile-toggle">
+                      <input type="checkbox" />
+                      <span class="profile-toggle__slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-card">
+                <h2 class="profile-card__title">Güvenlik</h2>
+                <div class="profile-security">
+                  <button class="profile-card__btn">Şifre Değiştir</button>
+                  <button class="profile-card__btn profile-card__btn--danger">Hesabı Sil</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>
+

@@ -44,4 +44,16 @@
 
   /* --- TRANSITIONS --- */
   --transition-standard: all 0.3s ease;
+
+  /* --- CONTACT SPECIFIC --- */
+  --contact-gradient: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  --contact-border-radius: 16px;
+  --contact-border-color: rgba(0, 0, 0, 0.05);
+  --contact-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --contact-icon-bg: rgba(232, 141, 159, 0.1);
+  --form-focus-shadow: 0 0 0 3px rgba(232, 141, 159, 0.1);
+  --form-error-color: #dc3545;
+  --form-success-bg: #d4edda;
+  --form-success-border: #c3e6cb;
+  --form-success-color: #155724;
 }

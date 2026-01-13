@@ -120,7 +120,7 @@
   border: 1px solid var(--color-accent);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
+  border-radius: 50px;
   color: var(--color-white);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);

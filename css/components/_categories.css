@@ -6,13 +6,22 @@
 /* 1. BASE STYLES (Mobile First) */
 .category-grid {
   width: 100%;
+  min-height: 100vh;
   padding: 4rem var(--spacing-sm);
   background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category-grid__container {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .category-grid__title {
@@ -33,13 +42,15 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* 3. CATEGORY CARD (Mobile) - Minimal Glass Morphism */
 .category-card {
   position: relative;
   width: 100%;
-  min-height: 200px;
+  min-height: 180px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -51,7 +62,25 @@
   justify-content: center;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+/* Hover görsel efekti için pseudo-element */
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .category-card:hover {
@@ -66,7 +95,7 @@
 /* Content */
 .category-card__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   color: var(--color-black);
   width: 100%;
@@ -121,7 +150,17 @@
   transform: translateX(4px);
 }
 
-/* 4. KATEGORİ ÖZEL STİLLER - Minimal, sadece hover'da fark */
+/* 4. KATEGORİ ÖZEL STİLLER - Hover görsel efektleri */
+/* KADIN Kategorisi */
+.category-card--women::before {
+  background-image: url('../../assets/images/category-women-desktop.png');
+  background-size: cover;
+}
+
+.category-card--women:hover::before {
+  opacity: 1;
+}
+
 .category-card--women:hover {
   border-color: rgba(232, 141, 159, 0.4);
 }
@@ -150,10 +189,11 @@
   .category-grid__wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 700px;
   }
 
   .category-card {
-    min-height: 240px;
+    min-height: 220px;
   }
 }
 
@@ -168,6 +208,7 @@
   .category-grid__wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    max-width: 1200px;
   }
 
   .category-card {
