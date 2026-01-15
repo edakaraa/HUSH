@@ -98,6 +98,99 @@
   display: block;
 }
 
+/* --- WISHLIST DROPDOWN --- */
+.wishlist {
+  position: relative;
+}
+
+.wishlist__dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: -0.5rem;
+  width: 260px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+  z-index: 1001;
+}
+
+.wishlist__dropdown.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.wishlist__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.wishlist__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.wishlist__item:hover {
+  background-color: var(--color-gray-light);
+}
+
+.wishlist__thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.wishlist__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.wishlist__name {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+}
+
+.wishlist__code {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.wishlist__footer {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  border-top: 1px solid var(--color-gray-light);
+  transition: color 0.2s ease;
+}
+
+.wishlist__footer:hover {
+  color: var(--color-accent);
+}
+
 /* Mobilde Hesabım ve Favoriler GİZLİ (Hamburger menüye gitti) */
 .action-btn[aria-label="Hesabım"],
 .action-btn[aria-label="Favoriler"] {

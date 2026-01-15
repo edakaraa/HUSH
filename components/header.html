@@ -39,9 +39,58 @@
         <img src="assets/icons/search.png" alt="Search" />
       </button>
 
-      <button class="action-btn" aria-label="Favoriler">
-        <img src="assets/icons/heart.png" alt="Favorites" />
-      </button>
+      <div class="wishlist">
+        <button
+          class="action-btn wishlist__trigger"
+          id="wishlist-trigger"
+          aria-label="Favoriler"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <img src="assets/icons/heart.png" alt="Favorites" />
+        </button>
+        <div class="wishlist__dropdown" id="wishlist-dropdown" role="menu">
+          <ul class="wishlist__list">
+            <li class="wishlist__item" role="menuitem">
+              <img
+                src="assets/images/perfume1.jpg"
+                alt="Sabrina Parfüm"
+                class="wishlist__thumb"
+              />
+              <div class="wishlist__info">
+                <span class="wishlist__name">Sabrina</span>
+                <span class="wishlist__code">2203</span>
+              </div>
+            </li>
+            <li class="wishlist__item" role="menuitem">
+              <img
+                src="assets/images/perfume2.jpg"
+                alt="Brielle Parfüm"
+                class="wishlist__thumb"
+              />
+              <div class="wishlist__info">
+                <span class="wishlist__name">Brielle</span>
+                <span class="wishlist__code">2C08</span>
+              </div>
+            </li>
+            <li class="wishlist__item" role="menuitem">
+              <img
+                src="assets/images/perfume3.jpg"
+                alt="Naomi Parfüm"
+                class="wishlist__thumb"
+              />
+              <div class="wishlist__info">
+                <span class="wishlist__name">Naomi</span>
+                <span class="wishlist__code">2208</span>
+              </div>
+            </li>
+          </ul>
+          <a href="profile.html#favorites" class="wishlist__footer">
+            Favorilerime Git
+          </a>
+        </div>
+      </div>
+
       <button class="action-btn" aria-label="Hesabım">
         <img src="assets/icons/user.png" alt="Account" />
       </button>

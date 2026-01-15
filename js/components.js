@@ -65,6 +65,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.style.overflow = ''; // Sayfa kaymasını geri aç
             }
 
+            // --- WISHLIST DROPDOWN ---
+            const wishlistTrigger = document.getElementById('wishlist-trigger');
+            const wishlistDropdown = document.getElementById('wishlist-dropdown');
+
+            if (wishlistTrigger && wishlistDropdown) {
+                const closeWishlist = () => {
+                    wishlistDropdown.classList.remove('is-open');
+                    wishlistTrigger.setAttribute('aria-expanded', 'false');
+                };
+
+                const openWishlist = () => {
+                    wishlistDropdown.classList.add('is-open');
+                    wishlistTrigger.setAttribute('aria-expanded', 'true');
+                };
+
+                wishlistTrigger.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    if (wishlistDropdown.classList.contains('is-open')) {
+                        closeWishlist();
+                        return;
+                    }
+                    openWishlist();
+                });
+
+                wishlistDropdown.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                });
+
+                document.addEventListener('click', closeWishlist);
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        closeWishlist();
+                    }
+                });
+            }
+
             // --- LOGO SHINE EFFECT (Desktop için) ---
             const logo = document.getElementById('interactive-logo');
             
