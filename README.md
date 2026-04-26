@@ -20,14 +20,14 @@ HUSH, parfüm koleksiyonları için tasarlanmış, minimalist ve modern bir e-ti
 
 \`\`\`text
 HUSH/
-├── assets/       # Görseller, ikonlar ve fontlar
-├── components/   # Tekrar kullanılabilir UI parçaları (header, footer vb.)
-├── css/          # BEM standartlarına uygun modüler stil dosyaları
-├── js/           # Etkileşimler ve DOM manipülasyonu
-├── about.html    # Hakkımızda sayfası
-├── collections.html # Koleksiyon ve ürün listeleme
-├── profile.html  # Kullanıcı profil arayüzü
-└── index.html    # Ana sayfa
+├── assets/       # Görseller, ikonlar ve fontlar  
+├── components/   # Tekrar kullanılabilir UI parçaları (header, footer vb.)  
+├── css/          # BEM standartlarına uygun modüler stil dosyaları  
+├── js/           # Etkileşimler ve DOM manipülasyonu  
+├── about.html    # Hakkımızda sayfası  
+├── collections.html # Koleksiyon ve ürün listeleme  
+├── profile.html  # Kullanıcı profil arayüzü  
+└── index.html    # Ana sayfa  
 \`\`\`
 
 ## 🚀 Yol Haritası (Roadmap)
