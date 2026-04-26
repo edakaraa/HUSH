@@ -1,4 +1,4 @@
-# ✧ HUSH | Premium Perfume E-Commerce
+# ✧ HUSH | Perfume E-Commerce
 
 HUSH, parfüm koleksiyonları için tasarlanmış, minimalist ve modern bir e-ticaret arayüzüdür.
 [![Canlı Demo](https://img.shields.io/badge/Canl%C4%B1_Demo-Yay%C4%B1nda-111111?style=for-the-badge)](https://hushperfume.netlify.app/)
